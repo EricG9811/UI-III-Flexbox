@@ -1,50 +1,137 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
@@ -52,15 +139,235 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     font-family: 'Titillium Web', sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: 'Bangers', cursive;
     letter-spacing: 1px;
     margin-bottom: 15px;
 }
 
-/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+/****************************************
+*
+*/
+body {
+    width: 1000px;
+    padding: 10px;
+}
+
+.container {
+    margin: auto;
+    width: 1000px;
+    /*        display: flex;*/
+    align-items: center;
+}
+
+header {
+    top: 0;
+    left: 0;
+    right: inherit;
+    width: 100%;
+    padding: 10px 0;
+    position: fixed;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav a {
+    padding: 30px 30px 16px 30px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: black;
+    font-weight: bolder;
+    background: white;
+
+}
+
+.section1 {
+    width: 1000px;
+    padding-bottom: 40px;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+button {
+    height: 30px;
+    padding: 0px 40px;
+    margin: 10px auto;
+    background-color: gray;
+    border: 1px black solid;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+.section1 .slogan {
+    font-size: 100px;
+}
+
+.section1 h1 {
+    font-size: 75px;
+    padding: 0;
+}
+
+.section2 {
+    padding: 20px 0;
+    box-sizing: border-box;
+    display: flex;
+    margin: auto;
+    width: 1000px;
+    border-top: 1px solid black;
+}
+
+.section2 p {
+    max-width: 98%;
+}
+
+.image1 {
+    width: 1000px;
+    margin: auto;
+}
+
+.section3 {
+    padding: 20px 0;
+    box-sizing: border-box;
+    display: flex;
+    margin: auto;
+    width: 1000px;
+    border-bottom: 1px solid black;
+}
+
+.section3 p {
+    max-width: 98%
+}
+
+.middle-img {
+    width: 1000px;
+    margin: auto;
+    align-items: center;
+}
+
+.contact {
+    padding-top: 40px;
+    width: 1000px;
+    margin: auto;
+
+}
+
+.contact a {
+    color: black;
+    text-decoration: none;
+}
+
+.contact a:hover,
+.contact a:active {
+    color: blue;
+}
+
+footer {
+    margin: auto;
+    margin-top: 50px;
+}
+
+footer p {
+    text-align: center;
+}
+
+.services-header-img {
+    width: 1000px;
+    margin: auto;
+}
+
+#container {
+    margin: auto;
+    padding-bottom: 20px;
+    height: 1200px;
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about {
+    margin-top: 100px;
+
+}
+
+.container h1 {
+    font-size: 30px;
+}
+
+.services-top {
+    margin: auto;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    width: 1000px;
+    border-bottom: 1px solid black;
+}
+
+.services {
+    height: 250px;
+    width: 450px;
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 18px;
+    justify-content: space-around;
+    align-content: space-around;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.services button {
+    margin: 0;
+}
+
+.service-facts {
+    align-items: flex-start;
+    padding-top: 50px;
+    width: 1000px;
+    display: flex;
+    border-top: 2px solid black;
+    margin: auto;
+    flex-flow: wrap;
+    justify-content: space-between;
+
+}
+
+.service-facts p {
+    width: 500px;
+    margin-bottom: 30px;
+}
+
+.service-facts ul {
+    list-style-type: square;
+    line-height: 30px;
+    margin-left: 20px;
+}
+
+.products {}
